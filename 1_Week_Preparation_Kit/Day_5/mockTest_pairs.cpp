@@ -20,6 +20,33 @@ int pairs(int k, vector<int> arr)
     return count;
 }
 
+/*
+other solution
+int pairs(int k, vector<int> arr) {
+    sort(arr.begin(), arr.end());
+    int i = 0, j = 1, count = 0; 
+
+    while (j < arr.size()) {
+        int diff = arr[j] - arr[i];
+        if (diff == k) {
+            count++;
+            i++;
+            j++;
+        } else if (diff < k) {
+            j++;
+        } else {
+            i++;
+        }
+
+        if (i == j) {
+            j++;
+        }
+    }
+
+    return count;
+}
+*/
+
 int main(){
 
     return 0;
